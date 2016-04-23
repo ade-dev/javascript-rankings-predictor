@@ -1,0 +1,174 @@
+body, select, input {
+  font-family: arial;
+  font-size: 14px;
+}
+
+.page-wrap {
+  width: 650px;
+  max-width: 100%;
+  margin-bottom: 50px;
+  margin: 0 auto;
+}
+
+.table-wrap {
+  margin: 0px auto;
+  width: 100%;
+}
+
+table {
+  position: relative;
+  width: 100%;
+  border-spacing: 0;
+}
+
+tr {
+  background: rgba(255, 255, 255, 0.9) none repeat scroll 0 0;
+  color: #222222;
+}
+
+th, td {
+  text-align: left;
+}
+
+th {
+  padding: 10px 15px 10px 0px;
+  border-top: 1px solid #e5e5e5;
+}
+
+td {
+  line-height: 1.5;
+  padding: 5px 15px 5px 0px;
+  overflow: visible;
+  border-bottom: 1px solid #e5e5e5;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+td button {
+  width: 100px;
+  text-align: left;
+}
+
+td:nth-child(1) {
+  font-weight: bold;
+}
+
+th:nth-child(1),
+td:nth-child(1) {
+  padding-left: 15px;
+}
+
+tr:nth-child(odd) {
+  background: rgba(243, 243, 243, 0.85);
+}
+
+.form-wrap {
+  width: 100%;
+  margin: 30px auto 0px auto;
+}
+
+.form-inner {
+  float: left;
+  padding: 15px;
+  margin: 0px 0px 50px 0px;
+  border: 1px solid #e5e5e5;
+  border-radius: .2rem;
+}
+.form-inner h2 {
+  margin: 0px;
+}
+
+form {
+  float: left;
+  width: 100%;
+}
+form label {
+  float: left;
+  font-weight: 600;
+  padding: 0px;
+  min-width: 50px;
+}
+form input, form select {
+  float: left;
+  clear: left;
+  width: 100%;
+  margin: 10px 0px 0px 0px;
+  padding: 2px;
+  box-sizing: border-box;
+}
+form select {
+  vertical-align: middle;
+}
+
+.team-col {
+  box-sizing: border-box;
+  float: left;
+  width: 100%;
+}
+.team-col h3 {
+  clear: both;
+  margin: 10px 0px 15px 0px;
+}
+.team-col.b {
+  float: left;
+}
+.team-col.b > * {
+  float: left;
+}
+.team-col.b h3 {
+  text-align: left;
+}
+.team-col > div {
+  float: left;
+  clear: left;
+  width: 100%;
+  margin: 0px 0px 10px 0px;
+}
+.team-col h2 {
+  margin: 0px;
+  padding: 10px 0px;
+}
+
+.venue-col {
+  float: left;
+  width: 100%;
+  margin: 10px 0px 0px 0px;
+}
+.venue-col button {
+  float: right;
+  margin: 10px 0px 0px 0px;
+}
+
+.clr-left {
+  clear: left;
+}
+
+@media (min-width: 544px) {
+  form input, form select {
+    width: 150px;
+    clear: none;
+    margin: 0px;
+  }
+  form .venue-col button {
+    margin: 0px;
+  }
+
+  .team-col {
+    width: 50%;
+  }
+  .team-col.b {
+    float: right;
+  }
+  .team-col.b > * {
+    float: right;
+    clear: right;
+  }
+  .team-col.b h3 {
+    text-align: left;
+  }
+  .team-col > div {
+    width: auto;
+    float: left;
+    clear: none;
+  }
+}

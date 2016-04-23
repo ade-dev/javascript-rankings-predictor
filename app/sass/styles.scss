@@ -1,0 +1,162 @@
+body, select, input{
+  font-family: arial;
+  font-size: 14px;
+}
+.page-wrap {
+  width: 650px;
+  max-width: 100%;
+  margin-bottom: 50px;
+  margin: 0 auto;
+}
+
+.table-wrap{
+  margin: 0px auto;
+  width: 100%;
+}
+
+table {
+  position: relative;
+  width: 100%;
+  border-spacing: 0;
+}
+tr {
+  background: rgba(255, 255, 255, 0.9) none repeat scroll 0 0;
+  color: #222222;
+}
+th, td {
+  text-align: left;
+}
+th {
+  padding: 10px 15px 10px 0px;
+  border-top: 1px solid #e5e5e5;
+}
+td {
+  line-height: 1.5;
+  padding: 5px 15px 5px 0px;
+  overflow: visible;
+  border-bottom: 1px solid #e5e5e5;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  button{
+    width: 100px;
+    text-align: left;
+  }
+}
+td:nth-child(1) {
+  font-weight: bold;
+}
+th:nth-child(1),
+td:nth-child(1) {
+  padding-left: 15px;
+}
+tr:nth-child(odd) {
+  background: rgba(243, 243, 243, 0.85);
+}
+.form-wrap{
+  width: 100%;
+  margin: 30px auto 0px auto;
+}
+.form-inner{
+  float: left;
+  padding: 15px;
+  margin: 0px 0px 50px 0px;
+  border: 1px solid #e5e5e5;
+  border-radius: .2rem;
+  h2{
+    margin: 0px;
+  }
+}
+form{
+  float: left;
+  width: 100%;
+  label{
+    float: left;
+    font-weight: 600;
+    padding: 0px;
+    min-width: 50px;
+  }
+  input, select{
+    float: left;
+    clear: left;
+    width: 100%;
+    margin: 10px 0px 0px 0px;
+    padding: 2px;
+    box-sizing: border-box;
+  }
+  select {
+    vertical-align: middle;
+  }
+}
+.team-col {
+  box-sizing: border-box;
+  float: left;
+  width: 100%;
+  h3{
+    clear: both;
+    margin: 10px 0px 15px 0px;
+  }
+  &.b{
+    float: left;
+    > *{
+      float: left;
+    }
+    h3{
+      text-align: left;
+    }
+  }
+  > div{
+    float: left;
+    clear: left;
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+  }
+  h2{
+    margin:0px;
+    padding: 10px 0px;
+  }
+}
+.venue-col {
+  float: left;
+  width: 100%;
+  margin: 10px 0px 0px 0px;
+  button {
+    float: right;
+    margin: 10px 0px 0px 0px;
+  }
+}
+.clr-left{
+  clear: left;
+}
+
+@media (min-width: 544px) {
+  form{
+    input, select{
+      width: 150px;
+      clear: none;
+      margin: 0px;
+    }
+    .venue-col button{
+      margin: 0px;
+    }
+  }
+  .team-col {
+    width: 50%;
+    &.b{
+      float: right;
+      > *{
+        float: right;
+        clear: right;
+      }
+      h3{
+        text-align: left;
+      }
+    }
+    > div{
+      width: auto;
+      float: left;
+      clear: none;
+    }
+  }
+}
+
