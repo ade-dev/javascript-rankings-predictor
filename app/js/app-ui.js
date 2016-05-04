@@ -32,7 +32,7 @@ var rankingsJson = [
       ratingsNode.rows[b].cells.item(0).setAttribute("id", a.team.id);
       ratingsNode.rows[b].cells.item(0).innerHTML = a.team.name;
       ratingsNode.rows[b].cells.item(1).innerHTML = a.pos;
-      ratingsNode.rows[b].cells.item(2).innerHTML = a.pts
+      ratingsNode.rows[b].cells.item(2).innerHTML = parseFloat(a.pts).toFixed(2);
     }
     return this
   }
@@ -48,15 +48,14 @@ var rankingsJson = [
       "matchId": 2524, "description": "Match Data",
       "venue": {"id": 900, "name": "Stadium", "city": "city", "country": matchVenueVal},
       "teams": [
-        {"id": bitBall.getTeamData(teamAval, "team", "id"), "name": teamAval, "abbreviation": bitBall.getTeamData(teamAval, "team", "abbr")},
-        {"id": bitBall.getTeamData(teamBval, "team", "id"), "name": teamBval, "abbreviation": bitBall.getTeamData(teamBval, "team", "abbr")}
+        {"id": bitBall.getTeamData(bitBall.rankingsClone, teamAval, "team", "id"), "name": teamAval, "abbreviation": bitBall.getTeamData(bitBall.rankingsClone, teamAval, "team", "abbr")},
+        {"id": bitBall.getTeamData(bitBall.rankingsClone, teamBval, "team", "id"), "name": teamBval, "abbreviation": bitBall.getTeamData(bitBall.rankingsClone, teamBval, "team", "abbr")}
       ],
-      "scores": [parseFloat(scoreA, 10), parseFloat(scoreB, 10)],
+      "scores": [scoreA, scoreB],
       "status": "U",
       "outcome": "N"
     }
-    scoreA < 1 || scoreB < 1 ? newMatch.outcome = "N" : scoreA > scoreB ? newMatch.outcome = "A" : scoreB > scoreA ? newMatch.outcome = "B" : newMatch.outcome = "D";
-
+    isNaN(scoreA) || isNaN(scoreB) ? newMatch.outcome = "N" : scoreA > scoreB ? newMatch.outcome = "A" : scoreB > scoreA ? newMatch.outcome = "B" : newMatch.outcome = "D";
     newMatch.outcome === "N" ? newMatch.status = "U" : newMatch.status = "C";
   };
 })();
